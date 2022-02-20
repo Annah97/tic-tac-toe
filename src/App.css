@@ -2,8 +2,14 @@
   text-align: center;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #282c34;
+}
+
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,12 +21,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 6vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 1vmin);
   color: white;
 }
 
@@ -35,4 +41,72 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-board {
+  width: 500px;
+  height: 500px;
+  background-color: #282c34;
+  border: none;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.App-board .App-square {
+  outline: 2px solid #61dafb;
+}
+
+.App-board div:last-child {
+  grid-area: 3/3;
+}
+
+.App-square {
+  display: grid;
+  place-items: center;
+  font-size: 100px;
+  color: #61dafb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App-square:active {
+  background-color: #64f4c0;
+}
+
+.App-xwinner {
+  width: 500px;
+  height: 500px;
+  background: url("img/xwinner.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+.App-owinner {
+  width: 500px;
+  height: 500px;
+  background: url("img/owinner.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+.App-draw {
+  width: 500px;
+  height: 500px;
+  background: url("img/draw.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.App-button {
+  background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
+  padding: 12px 0;
+  width: 200px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-family: Segoe UI, sans-serif;
 }
